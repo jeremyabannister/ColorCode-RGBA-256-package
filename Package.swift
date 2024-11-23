@@ -1,10 +1,7 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.0
 
-///
 import PackageDescription
 
-
-///
 let package = Package(
     name: "ColorCode-RGBA-256-package",
     products: [
@@ -14,34 +11,29 @@ let package = Package(
         ),
     ],
     dependencies: [
-        
-        ///
         .package(
             url: "https://github.com/jeremyabannister/AssertionToolkit",
-            "0.1.1" ..< "0.2.0"
+            .upToNextMinor(from: "0.1.3")
         ),
-        
-        ///
         .package(
             url: "https://github.com/jeremyabannister/RandomlyGeneratable-package",
-            "0.1.0" ..< "0.2.0"
+            .upToNextMinor(from: "0.1.1")
         ),
     ],
     targets: [
-        
-        ///
         .target(
             name: "ColorCode-RGBA-256-module",
             dependencies: []
         ),
-        
-        ///
         .testTarget(
             name: "ColorCode-RGBA-256-module-tests",
             dependencies: [
                 "AssertionToolkit",
                 "ColorCode-RGBA-256-module",
-                .product(name: "RandomlyGeneratable-module", package: "RandomlyGeneratable-package"),
+                .product(
+                    name: "RandomlyGeneratable-module",
+                    package: "RandomlyGeneratable-package"
+                ),
             ]
         ),
     ]

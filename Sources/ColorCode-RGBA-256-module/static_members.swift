@@ -5,10 +5,7 @@
 //  Created by Jeremy Bannister on 4/26/23.
 //
 
-///
 extension ColorCode_RGBA_256 {
-    
-    ///
     public static var white: Self {
         ColorCode_RGBA_256(
             red: 255,
@@ -17,8 +14,6 @@ extension ColorCode_RGBA_256 {
             alpha: 255
         )
     }
-    
-    ///
     public static var black: Self {
         ColorCode_RGBA_256(
             red: 0,
