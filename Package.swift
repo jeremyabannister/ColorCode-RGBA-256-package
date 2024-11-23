@@ -23,17 +23,18 @@ let package = Package(
     targets: [
         .target(
             name: "ColorCode-RGBA-256-module",
-            dependencies: []
+            dependencies: [
+                .product(
+                    name: "RandomlyGeneratable-module",
+                    package: "RandomlyGeneratable-package"
+                ),
+            ]
         ),
         .testTarget(
             name: "ColorCode-RGBA-256-module-tests",
             dependencies: [
                 "AssertionToolkit",
                 "ColorCode-RGBA-256-module",
-                .product(
-                    name: "RandomlyGeneratable-module",
-                    package: "RandomlyGeneratable-package"
-                ),
             ]
         ),
     ]
