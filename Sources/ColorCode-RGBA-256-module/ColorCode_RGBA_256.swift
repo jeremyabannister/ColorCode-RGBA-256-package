@@ -5,7 +5,7 @@
 //  Created by Jeremy Bannister on 4/25/23.
 //
 
-public struct ColorCode_RGBA_256: Hashable {
+public struct ColorCode_RGBA_256: Hashable, Sendable {
     
     public var red: UInt8
     public var green: UInt8
