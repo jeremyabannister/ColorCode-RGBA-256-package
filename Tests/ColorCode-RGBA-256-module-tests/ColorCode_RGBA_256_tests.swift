@@ -1,13 +1,9 @@
-//
-//  ColorCode_RGBA_256_tests.swift
-//  
-//
-//  Created by Jeremy Bannister on 4/25/23.
-//
+import Testing
 
-final class ColorCode_RGBA_256_tests: XCTestCase {
+struct ColorCode_RGBA_256_tests {
     
-    func test_init_red_green_blue_alpha() throws {
+    @Test
+    func init_red_green_blue_alpha() throws {
         func randomizedTest() throws {
             func random() -> UInt8 {
                 .generateRandom()
